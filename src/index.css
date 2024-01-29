@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header{
+  padding-top: 20px;
+
+}
+
+header .shop-cart-button {
+  float: right;
+  padding-right: 40px;
+  cursor: pointer;
+  transition: color, transform  500ms ease;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+  color: #dc3d3d;
+  transform: scale(1.5);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    width: 350px;
+    min-height: 50px;
+    background: #fafafa ;
+    -webkit-box-shadow: 4px 5px 15px -7px;
+    box-shadow: 4px 5px 15px -7px;
+    z-index: 3000;
+
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+
+header .shop-cart .empty h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+header .shop-cart .item {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+header .shop-cart .item h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .shop-cart .item b {
+  color: gray;
+  font-weight: 600;
+}
+
+.add-to-cart{
+  color: #61dafb;
+  cursor: pointer;
+  transition: color, transform  500ms ease;
+
+}
+
+.full-item {
+  cursor: pointer;
+  transition: color, transform  500ms ease;
+}
+
+header .shop-cart .item .delete-icon {
+  color: red;
+  float: right;
+  position: relative;
+  top: -25px;
+  cursor: pointer;
+  transition: color, transform  500ms ease
+
+}
+header .shop-cart .item .delete-icon:hover {
+  color: #841010;
+  transform: scale(1.5);
+}
+
+.categories div {
+  display: inline-block;
+  background: #ececec;
+  border-radius: 40px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all, transform  500ms ease
+}
+
+.categories div:hover {
+  border-color: #9e9d9d;
+  transform: scale(1.1);
+}
+
