@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-    margin: unset;
-    padding: unset;
+    /* margin: unset; */
+    /* padding: unset; */
 }
 
 body {
@@ -45,7 +45,7 @@ a:visited {
     color: grey;
 }
 
-a:active {
+a:active{
     color: blue;
 }
 
@@ -67,7 +67,6 @@ a:active {
     word-spacing: 42px; */
 
 }
-
 /* boxmodel */
 
 .info h1 {
@@ -75,10 +74,11 @@ a:active {
     font-style: normal;
 }
 
-.info img {
+.info img{
     margin-right: 40px;
     margin-bottom: 40px;
 }
+
 
 
 .info h4 {
@@ -87,10 +87,18 @@ a:active {
 
 .container {
     width: 1100px;
-    margin: auto;
+    margin: auto ;
     padding-top: 30px;
 }
 
+
+
+/* .social {
+    background: green ;
+    padding: 5px 3px 10px 12px;
+    border: red 5px solid;
+    margin: 5PX;
+} */
 
 .bg-yeloow {
     background: #fff9dc;
@@ -127,7 +135,6 @@ a:active {
 .table1 {
     width: 100%;
 }
-
 .table1 td {
     padding-bottom: 10px;
 }
@@ -152,11 +159,10 @@ a:active {
     /* border-bottom: 1px solid #ccc; */
 }
 
-.contact h2 {
+.contact h2{
     text-align: center;
 }
-
-.contact-form label {
+.contact-form label{
     display: block;
     font-size: 20px;
     color: #86898f;
@@ -184,7 +190,6 @@ a:active {
     width: 50%;
     margin-right: 20px;
 }
-
 .row > .contact-form:last-child {
     margin-right: 0;
 }
@@ -216,7 +221,7 @@ a:active {
     flex-direction: row;
     text-align: center;
     margin: unset;
-    padding: .7rem;
+    padding: .7rem  ;
     opacity: 1;
 
 }
@@ -240,32 +245,32 @@ a:active {
     width: 100%;
     display: flex;
 }
-
 .footer.container {
     display: flex;
     flex-direction: row;
     text-align: center;
     margin: unset;
-    padding: .7rem;
+    padding: .7rem  ;
     opacity: 1;
 
 }
-
 .main-content {
     flex: 1;
 }
 
 .footer {
+    /* position: fixed; */
     display: flex;
     width: 100%;
+    top: 0;
+    left: 0;
     background-color: rgba(162, 148, 148, 0.55);
     justify-content: center;
+    opacity: 1;
     padding: 1rem;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-}
 
+}
 
 .footer .container .content {
     justify-content: space-between;
@@ -288,113 +293,3 @@ a:active {
     width: 9%;
     border-radius: 10px;
 }
-
-/*code {*/
-/*  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
-/*    monospace;*/
-/*}*/
-
-/*header{*/
-/*  padding-top: 20px;*/
-
-/*}*/
-
-.shop-cart-button {
-    float: left;
-    padding-right: 40px;
-    cursor: pointer;
-    transition: color, transform 500ms ease;
-}
-
-.shop-cart-button:hover,
-.shop-cart-button.active {
-    color: #dc3d3d;
-    transform: scale(1.5);
-}
-
-.shop-cart {
-    position: absolute;
-    top: 30px;
-    right: 45px;
-    width: 350px;
-    min-height: 50px;
-    background: #fafafa;
-    -webkit-box-shadow: 4px 5px 15px -7px;
-    box-shadow: 4px 5px 15px -7px;
-    z-index: 3000;
-
-    padding: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-
-}
-
-
- .shop-cart .empty h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
- .shop-cart .item {
-    width: 100%;
-    float: left;
-    margin-bottom: 20px;
-}
-
- .shop-cart .item h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
- .shop-cart .item b {
-    color: rgb(128, 128, 128);
-    font-weight: 600;
-}
-
-.add-to-cart {
-    color: #61dafb;
-    cursor: pointer;
-    transition: color, transform 500ms ease;
-
-}
-
-/*.full-item {*/
-/*  cursor: pointer;*/
-/*  transition: color, transform  500ms ease;*/
-/*}*/
-
- .shop-cart .item .delete-icon {
-    color: red;
-    float: right;
-    position: relative;
-    top: -25px;
-    cursor: pointer;
-    transition: color, transform 500ms ease
-
-}
-
- .shop-cart .item .delete-icon:hover {
-    color: #841010;
-    transform: scale(1.5);
-}
-
-.categories div {
-    display: inline-block;
-    background: #ececec;
-    border-radius: 40px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: all, transform 500ms ease
-}
-
-.categories div:hover {
-    border-color: #9e9d9d;
-    transform: scale(1.1);
-}
-
-
-
-

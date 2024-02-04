@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ordinal-nucleus-413211",
+  "private_key_id": "4d25f21e9f65f558dff5df637932ba560f92ba02",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCriqNd+wRqZjS1\nd7LVraomqC3/AmxGEBIsAux5OZx9fbBqZoo4OANKDBuXHU1EYwP7RuynrYrFOCWy\n8qg6Zh8iLEM+Sxow79+XFX/Gn94WDNTPdvTxcC/PGj8BG6CXEOuosD0J6iPe0NQS\nBAoajGM1AnN8fgJaVzZ4U8KHbkuZEfqzoRrQXERyD04KywI1r/88fRK8ni1OSh0i\n5Wyu/1Nonl3uKcHyf/lDPJfnovMJbkcxZLf/TELmIJQDbHWtJZDhUhjzFyrBRQEU\nJKQzaju6NE4A8XE/TsLg156b23F2atRjgDPaPdMuVjaU/PxjzanYGtP2VLzi7QJv\nZ2JJWP+pAgMBAAECggEAQyFjI1ErfjP3JpjsPGDU+IHSVjxtgNGjOuP+BMa97gI0\n+r6cErog12Z7mZyW809IbJpp3Ii2iM2bOzdpDEmQn3/w5LzhSAtnVanNMj6326sz\n0Oi9nIqJuyOLSnS0WMn/XylxCaM+XGEezNoV1iPgYwtNhIePhikhIN+ufe902Dai\nmiwYphmlP8lIEJuHgVXwOjpWrS10Luse/OwB1kJzhtjnQ3Pho+nfV+Lbswlnkiqx\nV5rLp/Xyn25uUd9qbdSRpxUIj/YBHlMeg4nDw+RTbx2Hp5sXikuM+sMquCFfVRpg\niMDo0EUwuuKJkezOzs+5MGxhdfxh2/k4DzRiGr/J/QKBgQDuwnD+70qqILk9v7Zy\nBuCzO6HJ2qJ4RctLYGpHfkCjNyekm4Ad96Ng46K04TSNwu54h6lRu4Ers709xtCW\nZvfDyRjV0Wkkzyd7Slx21XIM0V3QPcLRVdHwZwY1DtC2VCn3ORNJQAQslM+T6XAj\n3RZMGtEcdOFiITTwrnEQEGHPswKBgQC37aW+pfv6oGfcyfiu6vMs5hcOUKsw/ev4\nTGr3pr7PZyahPlk3nvSPA1anhoFLeh8wh8XjOlMdc5kH4KkLgq2IJQsUoILhsvLs\nJMrE+N/I5wL2P/cvWtasqYJNf919SubSp1oGgmisqGfq0rHM9hYkZKo7FJePQbuz\nzVCph+llMwKBgC1E/Lu5j0SWk8jbcrJID46sPc7R/4Aia5tNGpmXnJXVvVR+j1of\nPAEA6Da3hIlkbma4AiiXDrTEjZsK+T2rJEsg8+6GmBL8nBXKUaHOcqNvhwQW0btz\nNC0Ku6iPuI75gkN3tOpskt4JERqQZkzGfJXNd9yXZKyAc1M3IATVtlX1AoGAF8BR\nifgHPQsfvmw6d+QROPgRfCDAqpfvs+WyXn6i30eTvni9rqgRLrKgqwt8gNGpW2v9\nCuXKO+Bkn5bMXZcnb5BRCP3dSOYB5qqtoJf+1gO25zPFaNETLcLJ99YONRLKEePY\nhUSr3bf1i2Zf3Xbdzx9MuEplc/NqGMLnqqzJX+8CgYEA4BugnWLXvrP2aSKpKM96\n0hoqz4J2XgPc4WpxL+boFz4wn5wcGhYceXvolIfzromM8R5AfdfEfQZGiw9IYWiW\nABmm6CWSzXQrXZHyDjOuMnDcEiQeSSdviBUFYzl1mZW+lXFZisPh1amOQNtBRkLA\n0rvHDgcprpPTLxvGlFRt27s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kermet-site@ordinal-nucleus-413211.iam.gserviceaccount.com",
+  "client_id": "107114727920993858471",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kermet-site%40ordinal-nucleus-413211.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
