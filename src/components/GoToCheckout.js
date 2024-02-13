@@ -4,25 +4,18 @@ import EmailForm from "./EmailForm";
 
 class GoToCheckout extends Component {
 
-  constructor(props) {
-    super(props);
+  render() {
+    let totalPrice = 0;
 
-    this.state = {
-      goToOffer: false,
+    for (const [product, quantity] of this.props.orders) {
+      const productPrice = product.price * quantity;
+      totalPrice += productPrice;
     }
 
-    this.onOffer = this.onOffer.bind(this)
-  }
-
-  render() {
     return (
       <div>
-        <h3 onClick={() => this.props.onShowFullOrder()}>Вернуться к покупкам</h3>
-        {this.state.goToOffer &&
-          <h3 onClick={() => this.onOffer()}>Вернуться к корзине товаров</h3>
-        }
 
-        {!this.state.goToOffer &&
+        {!this.props.goToOffer &&
           Array.from(this.props.orders.entries()).map(([key, value]) => {
             if (key) {
               return (
@@ -41,11 +34,15 @@ class GoToCheckout extends Component {
 
           })
         }
-        {!this.state.goToOffer &&
 
-            <h2 onClick={() => this.onOffer()}>Перейти к оформлению заказа</h2>
+        {!this.props.goToOffer &&
+            <>
+              <h3>Итоговая сумма заказа: {totalPrice}р.</h3>
+              <br/>
+              <h2 className='go-to-offer-button' onClick={() => this.props.onOffer()}>Перейти к оформлению заказа</h2>
+            </>
         }
-        {this.state.goToOffer &&
+        {this.props.goToOffer &&
           < EmailForm myList={this.props.orders} />
         }
 
@@ -53,9 +50,6 @@ class GoToCheckout extends Component {
     )
   }
 
-  onOffer() {
-    this.setState({goToOffer: !this.state.goToOffer})
-  }
 }
 
 export default GoToCheckout;

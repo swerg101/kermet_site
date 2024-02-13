@@ -1,6 +1,6 @@
 import './App.css';
 import Header from "./components/Header/Header";
-import Kermet from "./components/Goods/Кermet.json"
+import Kermet from "./components/Goods/Kermet.json"
 import Items from "./components/Items";
 import React, {Component} from "react";
 import Categories from "./components/Categories/Categories";
@@ -27,7 +27,11 @@ class App extends Component {
 
             ShowContact: false,
 
+            goToOffer: false,
+
         }
+
+        this.onOffer = this.onOffer.bind(this)
 
         this.state.currItems = this.state.items
 
@@ -48,7 +52,14 @@ class App extends Component {
         return (
 
             <div>
+                <Header
+                    onOffer={this.onOffer}
+                    goToOffer={this.state.goToOffer}
+                    onShowContact={this.onShowContact}
+                    showFullOrder={this.state.showFullOrder}
+                    onShowFullOrder={this.onShowFullOrder}
 
+                />
                 {this.state.ShowContact && <ShowContact onShowContact={this.onShowContact}/>
                 }
                 {!this.state.ShowContact &&
@@ -56,15 +67,7 @@ class App extends Component {
                     !this.state.showFullItem &&
 
                     <>
-                        <Header
-                            orders={this.state.orders}
-                            onDelete={this.deleteOrder}
-                            onAdd={this.addToOrder}
-                            onToDelete={this.deleteToOrder}
-                            onShowFullOrder={this.onShowFullOrder}
 
-                            onShowContact={this.onShowContact}
-                        />
                         <Cart
                             orders={this.state.orders}
                             onDelete={this.deleteOrder}
@@ -83,7 +86,9 @@ class App extends Component {
                     <ShowFullItem onShowItem={this.onShowItem} onAdd={this.addToOrder} item={this.state.fullItem}/>
                 }
                 {this.state.showFullOrder &&
-                    <GoToCheckout orders={this.state.orders}
+                    <GoToCheckout onOffer={this.onOffer}
+                                  goToOffer={this.state.goToOffer}
+                                  orders={this.state.orders}
                                   onAdd={this.addToOrder}
                                   onToDelete={this.deleteToOrder}
                                   onShowFullOrder={this.onShowFullOrder}
@@ -129,7 +134,7 @@ class App extends Component {
 
     deleteToOrder(item) {
         if (item && this.state.orders.get(item) === 1) {
-            const newOrders = new Map(Array.from(this.state.orders.entries()).filter(([key, value]) => key && key.articul !== item.articul));
+            const newOrders = new Map(Array.from(this.state.orders.entries()).filter(([key, value]) => key.articul !== item.articul || value > 1));
             this.setState({orders: newOrders});
         } else {
             this.setState({orders: this.state.orders.set(item, this.state.orders.get(item) - 1)});
@@ -141,6 +146,10 @@ class App extends Component {
         this.setState({
             orders: new Map(Array.from(this.state.orders.keys()).filter(el => el.articul !== id))
         });
+    }
+
+    onOffer() {
+        this.setState({goToOffer: !this.state.goToOffer})
     }
 
 

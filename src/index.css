@@ -81,6 +81,8 @@ a:active {
 }
 
 
+
+
 .info h4 {
     margin-bottom: 10px;
 }
@@ -88,7 +90,22 @@ a:active {
 .container {
     width: 1100px;
     margin: auto;
-    padding-top: 30px;
+    padding-top: 0;
+}
+.container2 {
+    width: 1100px;
+    margin-left: 12%;
+    margin-top: 5%;
+    padding-top: 0;
+}
+
+.container_items {
+    width: 1100px;
+    margin-left: 7%;
+    display: table-row;
+    margin-top: 1.5%;
+    padding-top: 0;
+    /*background-color: #ececf1;*/
 }
 
 
@@ -110,6 +127,11 @@ a:active {
     margin-bottom: 20px;
     border-radius: 20px;
 }
+
+.contact-form {
+    text-decoration-color: blue;
+}
+
 
 .card h2 {
     margin-bottom: 12px;
@@ -159,7 +181,7 @@ a:active {
 .contact-form label {
     display: block;
     font-size: 20px;
-    color: #86898f;
+    color: #202226;
 }
 
 .contact-form input,
@@ -300,8 +322,8 @@ a:active {
 /*}*/
 
 .shop-cart-button {
-    float: left;
-    padding-right: 40px;
+    float: right;
+    padding-right: 25%;
     cursor: pointer;
     transition: color, transform 500ms ease;
 }
@@ -309,12 +331,13 @@ a:active {
 .shop-cart-button:hover,
 .shop-cart-button.active {
     color: #dc3d3d;
-    transform: scale(1.5);
+    /*transform: scale(1.5);*/
 }
 
 .shop-cart {
     position: absolute;
-    top: 30px;
+    padding-left: 10px;
+    top: 11.8%;
     right: 45px;
     width: 350px;
     min-height: 50px;
@@ -323,9 +346,7 @@ a:active {
     box-shadow: 4px 5px 15px -7px;
     z-index: 3000;
 
-    padding: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+
 
 }
 
@@ -335,7 +356,7 @@ a:active {
     margin-bottom: 20px;
 }
 
- .shop-cart .item {
+ .shop-cart .items {
     width: 100%;
     float: left;
     margin-bottom: 20px;
@@ -352,10 +373,38 @@ a:active {
 }
 
 .add-to-cart {
-    color: #61dafb;
+    color: blue;
+    display: inline-block;
+    background: lightblue;
+    border-radius: 40px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
     cursor: pointer;
-    transition: color, transform 500ms ease;
+    border: 1px solid transparent;
+    transition: all, transform 500ms ease
 
+}
+.add-to-cart:hover{
+    border-color: navy;
+    transform: scale(1.1);
+}
+
+.go-to-offer{
+    color: green;
+    display: inline-block;
+    background: lightgreen;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all, transform 500ms ease
+}
+.go-to-offer:hover{
+    border-color: darkgreen;
+    transform: scale(1.1);
 }
 
 /*.full-item {*/
@@ -389,11 +438,33 @@ a:active {
     border: 1px solid transparent;
     transition: all, transform 500ms ease
 }
-
 .categories div:hover {
     border-color: #9e9d9d;
     transform: scale(1.1);
 }
+
+.item {
+    color: red;
+    display: table-row;
+    padding-top: 10px;
+}
+
+.go-to-offer-button{
+    display: inline-block;
+    background: lightgrey;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all, transform 500ms ease
+}
+.go-to-offer-button:hover{
+    border-color: #9e9d9d;
+    transform: scale(1.1);
+}
+
 
 
 

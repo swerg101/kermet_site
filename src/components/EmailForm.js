@@ -42,6 +42,8 @@ class EmailForm extends Component {
       alert('Произошла ошибка при отправке данных.');
     }
   };
+  inn;
+  adress;
 
   render() {
     if (this.state.orderSubmitted) {
@@ -55,44 +57,81 @@ class EmailForm extends Component {
 
     // В противном случае отображаем форму
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            ФИО:
-            <input
-              type="text"
-              name="fullName"
-              value={this.state.fullName}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
+        <body className="body">
+        <div className="container2">
 
-          <label>
-            Адрес электронной почты:
-            <input
-              type="email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
+          <div className="contact">
+            <div>
+              <form onSubmit={this.handleSubmit}>
+                <div className="contact-form">
+                  <label>
+                    ФИО:
+                    <input
+                        type="text"
+                        name="fullName"
+                        value={this.state.fullName}
+                        onChange={this.handleChange}
+                    />
+                  </label>
+                  <br/>
+                </div>
+                <div className="contact-form">
+                  <label>
+                    Адрес электронной почты:
+                    <input
+                        type="email"
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                    />
+                  </label>
+                  <br/>
+                </div>
+                <div className="contact-form">
+                  <label>
+                    Номер телефона:
+                    <input
+                        type="tel"
+                        name="phoneNumber"
+                        value={this.state.phoneNumber}
+                        onChange={this.handleChange}
+                    />
+                  </label>
+                  <br/>
 
-          <label>
-            Номер телефона:
-            <input
-              type="tel"
-              name="phoneNumber"
-              value={this.state.phoneNumber}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
+                </div>
+                <div className="contact-form">
+                  <label>
+                    ИНН:
+                    <input
+                        type="inn"
+                        name="inn"
+                        value={this.state.inn} // я не ебал что в валуе писать
+                        onChange={this.handleChange}
+                    />
+                  </label>
+                </div>
+                <div className="contact-form">
+                  <label>
+                    Адрес доставки:
+                    <input
+                        type="adress"
+                        name="delivery adress"
+                        value={this.state.adress} // я не ебал что в валуе писать
+                        onChange={this.handleChange}
+                    />
+                  </label>
+                  <br/>
 
-          <button type="submit">Отправить</button>
-        </form>
-      </div>
+                  <button type="submit">Отправить</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+        </body>
+
     );
   }
 }

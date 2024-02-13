@@ -1,14 +1,20 @@
 import React, {Component, useState} from 'react';
 import {FaShoppingCart} from "react-icons/fa";
 import Order from "./Header/Order";
+import {DiVim} from "react-icons/di";
 
 const showOrders = (props) => {
-    return (
-        <div>
+    let sum = 0
+    let totalPrice = 0;
+
+    for (const [product, quantity] of props.orders) {
+        const productPrice = product.price * quantity;
+        totalPrice += productPrice;
+    }
+    return (<div>
             {Array.from(props.orders.entries()).map(([key, value]) => {
                 if (key) {
-                    return (
-                        <Order
+                    return (<Order
                             key={key.articul}
                             item={key}
                             counter={value}
@@ -20,37 +26,38 @@ const showOrders = (props) => {
                 }
                 return null;
             })}
-        </div>
-    );
+            <p className='summa'>Сумма заказа:{totalPrice}р.</p>
+        </div>);
 };
 
 
 const showNothing = () => {
-    return (
-        <div className='empty'>
+    return (<div className='empty'>
             <h2>Товаров нет</h2>
-        </div>
-    )
+        </div>)
 }
 
-function Cart(props){
+function Cart(props) {
     let [cartOpen, setCartOpen] = useState(false)
 
-    return(
-        <div>
-            <FaShoppingCart onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && 'active'}`} />
+    return (<div>
+            <FaShoppingCart onClick={() => setCartOpen(cartOpen = !cartOpen)}
+                            className={`shop-cart-button ${cartOpen && 'active'}`}/>
             {cartOpen && (
-                <div className='shop-cart'>
-                    <h5 onClick={() => {
-                        props.onShowFullOrder();
-                        setCartOpen(cartOpen => !cartOpen);
-                    }}>
-                        Перейти к оформлению
-                    </h5>
 
-                    {Array.from(props.orders.keys()).length > 0 ? showOrders(props) : showNothing()}
-                </div>
-            )}
+                <div className="container">
+                    <div className='shop-cart'>
+
+                        {Array.from(props.orders.keys()).length > 0 ? showOrders(props) : showNothing()}
+
+                        <h5 className='go-to-offer' onClick={() => {
+                            props.onShowFullOrder();
+                            setCartOpen(cartOpen => !cartOpen);
+                        }}>
+                            Перейти к оформлению
+                        </h5>
+                    </div>
+                </div>)}
         </div>
 
     )
