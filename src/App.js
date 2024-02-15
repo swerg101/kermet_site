@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import GoToCheckout from "./components/GoToCheckout";
 import ShowContact from "./components/ShowContact";
 import Cart from "./components/Cart";
+import EmployeeInfo from "./components/EmployeeInfo/EmployeeInfo";
 
 class App extends Component {
 
@@ -29,6 +30,9 @@ class App extends Component {
 
             goToOffer: false,
 
+            showEmployeeInfo: false,
+
+
         }
 
         this.onOffer = this.onOffer.bind(this)
@@ -44,6 +48,7 @@ class App extends Component {
 
 
         this.onShowContact = this.onShowContact.bind(this)
+        this.onShowEmployeeInfo = this.onShowEmployeeInfo.bind(this)
 
 
     }
@@ -52,20 +57,33 @@ class App extends Component {
         return (
 
             <div>
+                {/*Отрисовываем Шапку сайта*/}
                 <Header
+                    showContact={this.state.ShowContact}
                     onOffer={this.onOffer}
                     goToOffer={this.state.goToOffer}
                     onShowContact={this.onShowContact}
                     showFullOrder={this.state.showFullOrder}
                     onShowFullOrder={this.onShowFullOrder}
-
+                    onShowEmployeeInfo={this.onShowEmployeeInfo}
+                    showEmployeeInfo={this.state.showEmployeeInfo}
                 />
-                {this.state.ShowContact && <ShowContact onShowContact={this.onShowContact}/>
+
+                {/*Отрисовываем только Контактную информацию*/}
+                {this.state.ShowContact && !this.state.showEmployeeInfo &&
+                    <ShowContact onShowContact={this.onShowContact}/>
                 }
+
+                {/*Отрисовываем только информацию о работниках*/}
+                {this.state.showEmployeeInfo &&
+                    <EmployeeInfo />
+                }
+
+                {/*Отрисовываем только Полный каталог товаров*/}
                 {!this.state.ShowContact &&
                     !this.state.showFullOrder &&
                     !this.state.showFullItem &&
-
+                    !this.state.showEmployeeInfo &&
                     <>
 
                         <Cart
@@ -82,10 +100,14 @@ class App extends Component {
                     </>
 
                 }
-                {!this.state.showFullOrder && this.state.showFullItem &&
+
+                {/*Отрисовываем только Полную информацию о товаре*/}
+                {!this.state.showFullOrder && this.state.showFullItem && !this.state.showEmployeeInfo &&
                     <ShowFullItem onShowItem={this.onShowItem} onAdd={this.addToOrder} item={this.state.fullItem}/>
                 }
-                {this.state.showFullOrder &&
+
+                {/*Отрисовываем только Полный список покупок*/}
+                {this.state.showFullOrder && !this.state.showEmployeeInfo &&
                     <GoToCheckout onOffer={this.onOffer}
                                   goToOffer={this.state.goToOffer}
                                   orders={this.state.orders}
@@ -94,13 +116,19 @@ class App extends Component {
                                   onShowFullOrder={this.onShowFullOrder}
                     />
                 }
-                <Footer/>
+
+                {/*Отрисовываем Нижний элемент страницы*/}
+                <Footer onShowEmployeeInfo={this.onShowEmployeeInfo}/>
             </div>
 
 
         )
     }
 
+
+    onShowEmployeeInfo() {
+        this.setState({showEmployeeInfo: !this.state.showEmployeeInfo})
+    }
 
     onShowItem(item) {
         this.setState({fullItem: item})
@@ -156,3 +184,4 @@ class App extends Component {
 }
 
 export default App;
+

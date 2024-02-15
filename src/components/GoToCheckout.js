@@ -19,14 +19,16 @@ class GoToCheckout extends Component {
           Array.from(this.props.orders.entries()).map(([key, value]) => {
             if (key) {
               return (
-                <Order
-                  key={key.articul}
-                  item={key}
-                  counter={value}
-                  onAdd={this.props.onAdd}
-                  onDelete={this.props.onDelete}
-                  onToDelete={this.props.onToDelete}
-                />
+                  <div className="container_go_to_checkout">
+                    <Order
+                      key={key.articul}
+                      item={key}
+                      counter={value}
+                      onAdd={this.props.onAdd}
+                      onDelete={this.props.onDelete}
+                      onToDelete={this.props.onToDelete}
+                    />
+                  </div>
 
               );
             }
@@ -36,11 +38,14 @@ class GoToCheckout extends Component {
         }
 
         {!this.props.goToOffer &&
-            <>
-              <h3>Итоговая сумма заказа: {totalPrice}р.</h3>
-              <br/>
-              <h2 className='go-to-offer-button' onClick={() => this.props.onOffer()}>Перейти к оформлению заказа</h2>
-            </>
+
+              <div className="container_go_to_checkout">
+                <>
+                  <h3>Итоговая сумма заказа: {totalPrice}р.</h3>
+                  <br/>
+                  <h2 className='go-to-offer-button' onClick={() => this.props.onOffer()}>Перейти к оформлению заказа</h2>
+                </>
+              </div>
         }
         {this.props.goToOffer &&
           < EmailForm myList={this.props.orders} />

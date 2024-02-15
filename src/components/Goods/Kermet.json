@@ -5,6 +5,7 @@
   "description": "Бумага упаковочная 10кг",
   "name": "Бумага",
   "brand": "Россия",
+   "category": "cat_2",
   "price": "2800",
   "ostatok": "10"
  },
@@ -14,6 +15,7 @@
   "description": "Бур SDS-Plus ф4х110 мм",
   "name": "Буры SDS-Plus",
   "brand": "Россия",
+   "category": "cat_2",
   "price": "34",
   "ostatok": "32"
  },
@@ -23,6 +25,7 @@
   "description": "Бур SDS-Plus ф4х160 мм",
   "name": "Буры SDS-Plus",
   "brand": "Россия",
+   "category": "cat_1",
   "price": "42",
   "ostatok": "20"
  },
@@ -32,6 +35,7 @@
   "description": "Бур SDS-Plus ф4х210 мм",
   "name": "Буры SDS-Plus",
   "brand": "Россия",
+   "category": "cat_1",
   "price": "42",
   "ostatok": "92"
  },
@@ -50,6 +54,7 @@
   "description": "Бур SDS-Plus ф5х160 мм",
   "name": "Буры SDS-Plus",
   "brand": "Россия",
+   "category": "cat_1",
   "price": "46",
   "ostatok": "560"
  },

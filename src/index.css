@@ -444,9 +444,12 @@ a:active {
 }
 
 .item {
-    color: red;
+    color: #100c0c;
     display: table-row;
     padding-top: 10px;
+}
+.container_go_to_checkout {
+
 }
 
 .go-to-offer-button{
