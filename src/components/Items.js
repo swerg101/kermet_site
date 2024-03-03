@@ -1,20 +1,15 @@
 import {Component} from "react";
 import {Item} from "./Item";
 
-export class Items extends Component{
+export class Items extends Component {
     render() {
-        return(
-            <main>
-
-                <body className="body">
-                <div className="container_items">
-                    {this.props.items.map(
-                        el => (<Item onShowItem={this.props.onShowItem} key={el.articul} item={el} onAdd={this.props.onAdd}/>
-                        ))}
-                </div>
-                </body>
-            </main>
-        )
+        return (
+            <div className="container_right">
+                {this.props.items.map(el => (
+                    <Item onShowItem={this.props.onShowItem} key={el.articul} item={el} onAdd={this.props.onAdd} />
+                ))}
+            </div>
+        );
     }
 }
 export default Items

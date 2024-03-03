@@ -85,7 +85,6 @@ class App extends Component {
                     !this.state.showFullItem &&
                     !this.state.showEmployeeInfo &&
                     <>
-
                         <Cart
                             orders={this.state.orders}
                             onDelete={this.deleteOrder}
@@ -93,11 +92,14 @@ class App extends Component {
                             onToDelete={this.deleteToOrder}
                             onShowFullOrder={this.onShowFullOrder}
 
-
                         />
-                        <Categories chooseCategory={this.chooseCategory}/>
-                        <Items onShowItem={this.onShowItem} items={this.state.currItems} onAdd={this.addToOrder}/>
+                        <div className="container">
+                            <Categories chooseCategory={this.chooseCategory}/>
+                            <Items onShowItem={this.onShowItem} items={this.state.currItems} onAdd={this.addToOrder}/>
+                        </div>
+
                     </>
+
 
                 }
 

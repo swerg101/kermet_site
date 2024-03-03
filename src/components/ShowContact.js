@@ -5,7 +5,7 @@ class ShowContact extends Component {
         return (
             <body className="body">
 
-            <div className="container">
+            <div className="container_contact">
 
                 <div className="contact">
 

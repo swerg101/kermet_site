@@ -5,7 +5,7 @@ class Order extends Component {
     render() {
         return (
             <div className='item'>
-                <h2>{this.props.item.title}</h2>
+                <h3>{this.props.item.title}</h3>
                 <p>{this.props.item.description}</p>
                 <h4>{this.props.item.price}p.</h4>
                 <h5>
