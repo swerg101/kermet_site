@@ -1,10 +1,9 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import {FaShoppingCart} from "react-icons/fa";
 import Order from "./Header/Order";
-import {DiVim} from "react-icons/di";
+
 
 const showOrders = (props) => {
-    let sum = 0
     let totalPrice = 0;
 
     for (const [product, quantity] of props.orders) {

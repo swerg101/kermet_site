@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Order from "./Header/Order";
-import EmailForm from "./EmailForm";
+import EmailForm from "./Send_mail/EmailForm";
 
 class GoToCheckout extends Component {
 
