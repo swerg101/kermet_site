@@ -58,7 +58,7 @@ app.post('/send-email', async (req, res) => {
                    <p><strong>ИНН:</strong> ${inn}</p>
                    <p><strong>Адрес доставки:</strong> ${deliveryAddress}</p>
                    <p><strong>Заказ:</strong><br>${productList}</p>
-                    <h4><bold>Итоговая сумма заказа: ${totalPrice}р.</bold></h4>`,
+                   <h4><bold>Итоговая сумма заказа: ${totalPrice}р.</bold></h4>`,
         });
 
         res.send('Сообщение отправлено!');

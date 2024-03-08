@@ -51,7 +51,7 @@ const EmailForm = (props) => {
             };
 
             console.log(formDataObject)
-            const response = await fetch('http://localhost:3500/send-email', {
+            const response = await fetch('http://95.163.229.192/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
