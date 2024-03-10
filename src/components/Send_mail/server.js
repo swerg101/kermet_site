@@ -3,6 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
+
 dotenv.config();
 
 const app = express();
@@ -10,6 +11,7 @@ const PORT = 3500;
 
 app.use(express.json());
 app.use(cors());
+
 
 // Настройка транспортера для отправки электронной почты
 const transporter = nodemailer.createTransport({
