@@ -16,7 +16,7 @@ app.use(cors());
 // Настройка транспортера для отправки электронной почты
 const transporter = nodemailer.createTransport({
     host: 'smtp.yandex.ru',
-    port: 465,
+    port: 587,
     secure: false,
     auth: {
         user: 'dunaevspb@yandex.ru',
