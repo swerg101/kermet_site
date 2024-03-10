@@ -51,7 +51,7 @@ const EmailForm = (props) => {
             };
 
             console.log(formDataObject)
-            const response = await fetch('https://95.163.229.192:443/send-email', {
+            const response = await fetch('https://nobilepater.ru:443/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
