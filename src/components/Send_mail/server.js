@@ -42,10 +42,6 @@ app.post('/send-email', async (req, res) => {
 
         console.log(productList);
 
-        //
-        // console.log(productList)
-        // console.log(this.myList)
-        // console.log(req.body.myList)
 
         // Отправляем письмо
         await transporter.sendMail({
