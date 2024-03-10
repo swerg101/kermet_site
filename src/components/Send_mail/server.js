@@ -6,7 +6,7 @@ const cors = require('cors');
 dotenv.config();
 
 const app = express();
-const PORT = 443;
+const PORT = 3500;
 
 app.use(express.json());
 app.use(cors());
@@ -42,10 +42,6 @@ app.post('/send-email', async (req, res) => {
 
         console.log(productList);
 
-        //
-        // console.log(productList)
-        // console.log(this.myList)
-        // console.log(req.body.myList)
 
         // Отправляем письмо
         await transporter.sendMail({
