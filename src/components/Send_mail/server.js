@@ -1,10 +1,9 @@
-const dotenv = require('dotenv');
+
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 
-dotenv.config();
 
 const app = express();
 const PORT = 3500;
@@ -16,10 +15,10 @@ app.use(cors());
 // Настройка транспортера для отправки электронной почты
 const transporter = nodemailer.createTransport({
     host: 'smtp.yandex.ru',
-    port: 587,
-    secure: false,
+    port: 465,
+    secure: true,
     auth: {
-        user: 'dunaevspb@yandex.ru',
+        user: 'dunaevspb',
         pass: 'sdpwhgkunarwvnqa'
     }
 });
@@ -46,6 +45,7 @@ app.post('/send-email', async (req, res) => {
 
 
         // Отправляем письмо
+        console.log(transporter)
         await transporter.sendMail({
 
             from: 'dunaevspb@yandex.ru', // Адрес отправителя
