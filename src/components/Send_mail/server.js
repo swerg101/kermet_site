@@ -48,8 +48,8 @@ app.post('/send-email', async (req, res) => {
         // Отправляем письмо
         await transporter.sendMail({
 
-            from: process.env.EMAIL, // Адрес отправителя
-            to: process.env.EMAIL,   // Адрес получателя
+            from: 'dunaevspb@yandex.ru', // Адрес отправителя
+            to: 'sdpwhgkunarwvnqa',   // Адрес получателя
             subject: `Заказ от ${fullName}`,
             html: `<p><strong>ФИО:</strong> ${fullName}</p>
                    <p><strong>Email:</strong> ${email}</p>
