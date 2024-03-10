@@ -49,7 +49,7 @@ app.post('/send-email', async (req, res) => {
         await transporter.sendMail({
 
             from: 'dunaevspb@yandex.ru', // Адрес отправителя
-            to: 'sdpwhgkunarwvnqa',   // Адрес получателя
+            to: 'dunaevspb@yandex.ru',   // Адрес получателя
             subject: `Заказ от ${fullName}`,
             html: `<p><strong>ФИО:</strong> ${fullName}</p>
                    <p><strong>Email:</strong> ${email}</p>
