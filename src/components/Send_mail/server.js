@@ -49,6 +49,7 @@ app.post('/send-email', async (req, res) => {
 
         // Отправляем письмо
         await transporter.sendMail({
+
             from: process.env.EMAIL, // Адрес отправителя
             to: process.env.EMAIL,   // Адрес получателя
             subject: `Заказ от ${fullName}`,
