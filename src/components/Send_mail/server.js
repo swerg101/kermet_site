@@ -29,7 +29,7 @@ app.post('/send-email', async (req, res) => {
         let totalPrice = 0;
         let productList = '';
 
-
+        console.log('request is processed')
         myList.forEach(item => {
             const key = item.key; // Получаем информацию о товаре из свойства key
             const value = item.value; // Получаем количество товара из свойства value
