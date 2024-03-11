@@ -35,5 +35,5 @@ const server = http.createServer((req, res) => {
 
 const PORT = 3600;
 server.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
+    console.log(`Сервер для принятия запросов от Google Sheets настроен на порту: ${PORT}`);
 });
