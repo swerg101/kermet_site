@@ -47,7 +47,7 @@ class GoToCheckout extends Component {
             </div>
         }
         {this.props.goToOffer &&
-          < EmailForm myList={this.props.orders} />
+          < EmailForm  myList={this.props.orders} />
         }
 
       </body>
