@@ -25,9 +25,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm-run-all --parallel script1 script2",
+    "start": "npm-run-all --parallel script1 script2 script3",
     "script1": "react-scripts start",
     "script2": "node src/components/Send_mail/server.js",
+    "script3": "node src/components/Goods/testJsonAutoUpdate.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
