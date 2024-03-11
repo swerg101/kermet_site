@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'nobilepater.site',
+        user: 'nobilepater.site@yandex.ru',
         pass: 'zchnhrolpibhuvxj'
     }
 });
