@@ -1,9 +1,9 @@
-const dotenv = require('dotenv');
+
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
-dotenv.config();
+
 
 const app = express();
 const PORT = 3500;
@@ -11,14 +11,15 @@ const PORT = 3500;
 app.use(express.json());
 app.use(cors());
 
+
 // Настройка транспортера для отправки электронной почты
 const transporter = nodemailer.createTransport({
     host: 'smtp.yandex.ru',
     port: 465,
     secure: true,
     auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASS
+        user: 'nobilepater.site',
+        pass: 'zchnhrolpibhuvxj'
     }
 });
 
@@ -44,10 +45,11 @@ app.post('/send-email', async (req, res) => {
 
 
         // Отправляем письмо
+        console.log(transporter)
         await transporter.sendMail({
 
-            from: process.env.EMAIL, // Адрес отправителя
-            to: process.env.EMAIL,   // Адрес получателя
+            from: 'nobilepater.site@yandex.ru', // Адрес отправителя
+            to: 'dunaevspb@yandex.ru',   // Адрес получателя
             subject: `Заказ от ${fullName}`,
             html: `<p><strong>ФИО:</strong> ${fullName}</p>
                    <p><strong>Email:</strong> ${email}</p>
