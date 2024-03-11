@@ -18,8 +18,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'dunaevspb',
-        pass: 'sdpwhgkunarwvnqa'
+        user: 'nobilepater.site',
+        pass: 'zchnhrolpibhuvxj'
     }
 });
 
@@ -48,7 +48,7 @@ app.post('/send-email', async (req, res) => {
         console.log(transporter)
         await transporter.sendMail({
 
-            from: 'dunaevspb@yandex.ru', // Адрес отправителя
+            from: 'nobilepater.site@yandex.ru', // Адрес отправителя
             to: 'dunaevspb@yandex.ru',   // Адрес получателя
             subject: `Заказ от ${fullName}`,
             html: `<p><strong>ФИО:</strong> ${fullName}</p>

@@ -60,7 +60,7 @@ const EmailForm = (props) => {
             });
             console.log(response)
             if (response.ok) {
-                formSendResult.textContent = 'Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.';
+                formSendResult.textContent = 'Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.';
                 form.reset();
             } else if (response.status === 422) {
                 const errors = await response.json();
