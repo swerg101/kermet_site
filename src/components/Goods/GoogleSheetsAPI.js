@@ -1,6 +1,6 @@
 const { google } = require('googleapis');
 const fs = require('fs');
-import credentials from './credentials.json'
+const credentials = require('./credentials.json')
 class GoogleSheetsAPI {
   constructor() {
     // Загрузка ключей для авторизации
