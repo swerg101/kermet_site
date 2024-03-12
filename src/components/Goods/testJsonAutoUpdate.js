@@ -46,7 +46,7 @@ const PORT = 3600;
 
 app.use(express.json());
 app.use(cors());
-app.use(express.json({ limit: '10mb' })); // Установите здесь необходимый вам лимит
+app.use(express.json({ limit: '100mb' })); // Установите здесь необходимый вам лимит
 
 app.post('/sheets', async (req, res) => {
     try {
