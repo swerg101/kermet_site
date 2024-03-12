@@ -54,5 +54,5 @@ const server = http.createServer((req, res) => {
 
 const PORT = 3600; // Порт, на котором будет работать сервер
 server.listen(PORT, () => {
-    console.log(`Сервер запущен на порту ${PORT}`);
+    console.log(`Сервер для прослушивания изменений в таблице запущен на порту: ${PORT}`);
 });
