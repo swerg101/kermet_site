@@ -4,7 +4,6 @@ const { exec } = require('child_process');
 // Создаем HTTP сервер
 const server = http.createServer((req, res) => {
     if (req.method === 'POST' && req.url === '/sheets') {
-        console.log("Сообщение получено!")
         let body = '';
         req.on('data', chunk => {
             body += chunk.toString(); // Получаем тело POST запроса
@@ -18,7 +17,7 @@ const server = http.createServer((req, res) => {
                     console.log("Таблица была изменена!");
 
                     // Запускаем скрипт
-                    exec('node UpdateJSON.js', (error, stdout, stderr) => {
+                    exec('node src/components/Goods/UpdateJSON.js', (error, stdout, stderr) => {
                         if (error) {
                             console.error(`Ошибка при выполнении скрипта: ${error.message}`);
                             res.statusCode = 500;
