@@ -5,6 +5,7 @@ class GoogleSheetsAPI {
   constructor() {
     // Загрузка ключей для авторизации
     this.keys = JSON.parse(fs.readFileSync('./credentials.json'));
+    console.log('ok')
 
     // Указываем область доступа, в данном случае это таблицы
     this.scopes = ['https://www.googleapis.com/auth/spreadsheets'];

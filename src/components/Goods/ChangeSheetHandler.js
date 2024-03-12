@@ -1,6 +1,5 @@
 const GoogleSheetsAPI = require('./GoogleSheetsAPI');
 const http = require('http');
-const { exec } = require('child_process');
 
 // Создаем HTTP сервер
 const server = http.createServer((req, res) => {
