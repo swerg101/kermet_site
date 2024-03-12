@@ -1,3 +1,4 @@
+const GoogleSheetsAPI = require('./GoogleSheetsAPI');
 const http = require('http');
 const { exec } = require('child_process');
 
@@ -16,25 +17,9 @@ const server = http.createServer((req, res) => {
                 if (requestData.message === "Table_is_change!") {
                     console.log("Данные таблицы были изменены, вносим изменения в нашу БД");
 
-                    // Запускаем скрипт
-                    exec('node src/components/Goods/UpdateJSON.js', (error, stdout, stderr) => {
-                        if (error) {
-                            console.error(`Ошибка при выполнении скрипта: ${error.message}`);
-                            res.statusCode = 500;
-                            res.end('Internal Server Error');
-                            return;
-                        }
-                        if (stderr) {
-                            console.error(`Ошибка вывода: ${stderr}`);
-                            res.statusCode = 500;
-                            res.end('Internal Server Error');
-                            return;
-                        }
+                    const googleSheetsAPI = new GoogleSheetsAPI();
+                    googleSheetsAPI.getDataAndWriteToFile();
 
-                        console.log(`Скрипт 'UpdateJSON.js' был выполнен!`);
-                        res.statusCode = 200;
-                        res.end('OK');
-                    });
                 } else {
                     console.log("Неверное сообщение в запросе.");
                     res.statusCode = 400;
