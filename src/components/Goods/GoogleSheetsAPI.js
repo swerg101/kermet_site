@@ -1,10 +1,10 @@
 const { google } = require('googleapis');
 const fs = require('fs');
-
+import credentials from './credentials.json'
 class GoogleSheetsAPI {
   constructor() {
     // Загрузка ключей для авторизации
-    this.keys = JSON.parse(fs.readFileSync('./credentials.json'));
+    this.keys = credentials;
     console.log('ok')
 
     // Указываем область доступа, в данном случае это таблицы
