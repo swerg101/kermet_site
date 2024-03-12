@@ -1,10 +1,11 @@
 const { google } = require('googleapis');
 const fs = require('fs');
+const path = require('./ordinal-nucleus-413211-4d25f21e9f65.json')
 
 class GoogleSheetsAPI {
   constructor() {
     // Загрузка ключей для авторизации
-    this.keys = JSON.parse(fs.readFileSync('ordinal-nucleus-413211-4d25f21e9f65.json'));
+    this.keys = JSON.parse(fs.readFileSync(path));
 
     // Указываем область доступа, в данном случае это таблицы
     this.scopes = ['https://www.googleapis.com/auth/spreadsheets'];
@@ -91,6 +92,3 @@ class GoogleSheetsAPI {
 }
 
 module.exports = GoogleSheetsAPI;
-// Пример использования класса
-// const googleSheetsAPI = new GoogleSheetsAPI();
-// googleSheetsAPI.getDataAndWriteToFile();
