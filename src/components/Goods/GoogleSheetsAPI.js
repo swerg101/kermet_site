@@ -75,6 +75,7 @@ class GoogleSheetsAPI {
 
           const jsonString = JSON.stringify(jsonData, null, 2);
 
+          console.log(jsonString);
           // Записываем данные в файл
           fs.writeFileSync('Kermet.json', jsonString);
 
