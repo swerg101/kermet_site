@@ -30,6 +30,7 @@ const server = http.createServer((req, res) => {
                             res.end('Internal Server Error');
                             return;
                         }
+
                         console.log(`Скрипт 'UpdateJSON.js' был выполнен!`);
                         res.statusCode = 200;
                         res.end('OK');
