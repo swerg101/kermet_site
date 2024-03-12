@@ -51,6 +51,7 @@ app.use(express.json({ limit: '100mb' })); // Установите здесь н
 app.post('/sheets', async (req, res) => {
     try {
         console.log('request is processed')
+        console.log(req)
         const data = req.body;
 
         app.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
