@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
-    if (req.method === 'POST' && req.url === '/') {
+    if (req.method === 'POST' && req.url === '/sheets') {
         let body = '';
         req.on('data', (chunk) => {
             body += chunk.toString();
