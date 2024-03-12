@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
 
                 // Проверяем наличие слова "Table_is_change!"
                 if (requestData.message === "Table_is_change!") {
-                    console.log("Таблица была изменена!");
+                    console.log("Данные таблицы были изменены, вносим изменения в нашу БД");
 
                     // Запускаем скрипт
                     exec('node src/components/Goods/UpdateJSON.js', (error, stdout, stderr) => {
