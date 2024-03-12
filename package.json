@@ -13,6 +13,7 @@
     "express-validator": "^7.0.1",
     "flatted": "^3.2.9",
     "google-spreadsheet": "^4.1.1",
+    "googleapis": "^134.0.0",
     "json-circular-stringify": "^1.0.1",
     "nodemailer": "^6.9.11",
     "nodemon": "^3.1.0",
@@ -28,7 +29,7 @@
     "start": "npm-run-all --parallel script1 script2 script3",
     "script1": "react-scripts start",
     "script2": "node src/components/Send_mail/server.js",
-    "script3": "node src/components/Goods/testJsonAutoUpdate.js",
+    "script3": "node src/components/Goods/ChangeSheetHandler.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

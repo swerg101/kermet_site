@@ -2,7 +2,7 @@
   "name": "goods",
   "version": "1.0.0",
   "description": "",
-  "main": "AutoUpdateJSON.js",
+  "main": "UpdateJSON.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Goods-server.js"
