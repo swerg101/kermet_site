@@ -4,6 +4,7 @@ const { exec } = require('child_process');
 // Создаем HTTP сервер
 const server = http.createServer((req, res) => {
     if (req.method === 'POST' && req.url === '/sheets') {
+        console.log("Сообщение получено!")
         let body = '';
         req.on('data', chunk => {
             body += chunk.toString(); // Получаем тело POST запроса
