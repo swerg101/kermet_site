@@ -45,7 +45,7 @@ app.post('/send-email', async (req, res) => {
 
 
         // Отправляем письмо
-        console.log(transporter)
+        // console.log(transporter)
         await transporter.sendMail({
 
             from: 'nobilepater.site@yandex.ru', // Адрес отправителя
@@ -69,16 +69,16 @@ app.post('/send-email', async (req, res) => {
 
 app.post('/send-question', async (req, res) => {
     try {
-        const { fullName, email, message } = req.body;
+        const { name, email, message } = req.body;
 
         // Отправляем письмо
-        console.log(transporter)
+        // console.log(transporter)
         await transporter.sendMail({
 
             from: 'nobilepater.site@yandex.ru', // Адрес отправителя
             to: 'dunaevspb@yandex.ru',   // Адрес получателя
-            subject: `Сообщение от ${fullName}`,
-            html: `<h3><strong>ФИО:</strong> ${fullName}</h3>
+            subject: `Сообщение от ${name}`,
+            html: `<h3><strong>ФИО:</strong> ${name}</h3>
                    <h4><strong>Email:</strong> ${email}</h4>
                    <p><strong>Текст сообщения: </strong> ${message}</p>`
 
