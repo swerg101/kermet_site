@@ -66,10 +66,35 @@ app.post('/send-email', async (req, res) => {
         res.status(500).send(error.message);
     }
 });
+
+app.post('/send-question', async (req, res) => {
+    try {
+        const { fullName, email, message } = req.body;
+
+        // Отправляем письмо
+        console.log(transporter)
+        await transporter.sendMail({
+
+            from: 'nobilepater.site@yandex.ru', // Адрес отправителя
+            to: 'dunaevspb@yandex.ru',   // Адрес получателя
+            subject: `Сообщение от ${fullName}`,
+            html: `<h3><strong>ФИО:</strong> ${fullName}</h3>
+                   <h4><strong>Email:</strong> ${email}</h4>
+                   <p><strong>Текст сообщения: </strong> ${message}</p>`
+
+        });
+        res.send('Сообщение отправлено!');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send(error.message);
+    }
+});
+
+
 app.listen(PORT, (err) => {
     if (err) {
         return console.log(err);
     }
-    console.log(`Сервер запущен на порту ${PORT}`);
+    console.log(`Сервер для отправки почты запущен на порту: ${PORT}`);
 });
 
