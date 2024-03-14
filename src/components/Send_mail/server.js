@@ -24,6 +24,8 @@ const transporter = nodemailer.createTransport({
 });
 
 
+
+//Отправка заказа
 app.post('/send-email', async (req, res) => {
     try {
         const { fullName, phone, email, inn, deliveryAddress, myList } = req.body;
@@ -45,11 +47,10 @@ app.post('/send-email', async (req, res) => {
 
 
         // Отправляем письмо
-        // console.log(transporter)
         await transporter.sendMail({
 
             from: 'nobilepater.site@yandex.ru', // Адрес отправителя
-            to: 'dunaevspb@yandex.ru',   // Адрес получателя
+            to: ['nobilePater.dev@yandex.ru', 'blagorodnaya78@mail.ru'],   // Адрес получателя
             subject: `Заказ от ${fullName}`,
             html: `<p><strong>ФИО:</strong> ${fullName}</p>
                    <p><strong>Email:</strong> ${email}</p>
@@ -67,6 +68,7 @@ app.post('/send-email', async (req, res) => {
     }
 });
 
+//Отправка вопрса
 app.post('/send-question', async (req, res) => {
     try {
         const { name, email, message } = req.body;
@@ -76,7 +78,7 @@ app.post('/send-question', async (req, res) => {
         await transporter.sendMail({
 
             from: 'nobilepater.site@yandex.ru', // Адрес отправителя
-            to: 'dunaevspb@yandex.ru',   // Адрес получателя
+            to: ['nobilePater.dev@yandex.ru', 'blagorodnaya78@mail.ru'],   // Адрес получателя
             subject: `Сообщение от ${name}`,
             html: `<h3><strong>ФИО:</strong> ${name}</h3>
                    <h4><strong>Email:</strong> ${email}</h4>
