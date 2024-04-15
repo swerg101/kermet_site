@@ -7,7 +7,7 @@ class Footer extends Component {
                 <div className="container">
                     <div className="content">
                         <a className="contact_me" onClick={() => this.props.onShowEmployeeInfo()}>Наши сотрудники </a>
-                        <h4>Последнее обновление даты: 11.03.2024 13:00 </h4>
+                        <h4>Последнее обновление даты: 17.04.2024 10:00 </h4>
                     </div>
                 </div>
             </footer>
